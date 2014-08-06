@@ -32,11 +32,11 @@ if (isset($_GET['acao']) && ($_GET['acao']) == 'editar') :
         <input type="hidden" name="id" value="<?php echo $resultado['id']; ?>">
         <div class="input-prepend">
             <span class="add-on"><i class="icon-envelope"></i></span>
-            <input type="email" name="login" value="<?php echo $resultado['login']; ?>" placeholder="Novo email" />
+            <input required type="email" name="login" value="<?php echo $resultado['login']; ?>" placeholder="Novo email" />
         </div>
         <div class="input-prepend">
             <span class="add-on"><i class="icon-lock"></i></span>
-            <input type="password" name="senha" value="<?php echo $resultado['senha']; ?>" placeholder="Nova senha" />
+            <input required type="password" name="senha" value="<?php echo $resultado['senha']; ?>" placeholder="Nova senha" />
         </div>
         <br />
         <input type="submit" name="atualizar" class="btn btn-primary" value="Atualizar">
