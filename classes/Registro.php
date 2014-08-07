@@ -2,10 +2,10 @@
 
 class Registro {
 
-    protected $table = 'registro';
+    protected $table = 'registros';
     protected $instance;
     protected $name;
-    protected $tipo;
+    protected $tipo_id;
 
     public function __construct() {
         $this->instance = new PDO('pgsql:host=localhost;dbname=sicaes', 'sicaes', 'sicaes');
@@ -15,18 +15,18 @@ class Registro {
         return $this->name;
     }
 
-    public function getTipo() {
-        return $this->tipo;
-    }
-
     public function setName($name) {
         $this->name = $name;
     }
 
-    public function setTipo($tipo) {
-        $this->tipo = $tipo;
+    public function getTipo_id() {
+        return $this->tipo_id;
     }
 
+    public function setTipo_id($tipo_id) {
+        $this->tipo_id = $tipo_id;
+    }
+    
     public function listar($id) {
         $sql = "SELECT * FROM $this->table WHERE id = :id";
         $stmt = $this->instance->prepare($sql);
@@ -43,10 +43,10 @@ class Registro {
     }
 
     public function insert() {
-        $sql = "INSERT INTO $this->table (name,tipo) VALUES (:name, :tipo)";
+        $sql = "INSERT INTO $this->table (name,tipo_id) VALUES (:name, :tipo_id)";
         $stmt = $this->instance->prepare($sql);
         $stmt->bindValue(':name', $this->name);
-        $stmt->bindValue(':tipo', $this->tipo);
+        $stmt->bindValue(':tipo_id', $this->tipo_id);
         return $stmt->execute();
     }
 
@@ -61,7 +61,7 @@ class Registro {
         $sql = "UPDATE $this->table SET (name,tipo_id) = (:name,:tipo_id) WHERE id = :id";
         $stmt = $this->instance->prepare($sql);
         $stmt->bindParam(':name', $this->name);
-        $stmt->bindParam(':tipo_id', $this->tipo);
+        $stmt->bindParam(':tipo_id', $this->tipo_id);
         $stmt->bindParam(':id', $id);
         return $stmt->execute();
     }

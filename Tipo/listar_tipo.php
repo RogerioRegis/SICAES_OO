@@ -42,4 +42,4 @@ include_once '../top/menu.php';
 </table> 
 
 <?php
-include_once '../footer.php';
+include_once '../top/footer.php';

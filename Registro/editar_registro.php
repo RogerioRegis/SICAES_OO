@@ -7,10 +7,10 @@ if (isset($_POST['atualizar'])) {
 
     $id = $_POST['id'];
     $name = $_POST['name'];
-    $tipo = $_POST['tipo'];
+    $tipo_id = $_POST['tipo_id'];
 
     $registro->setName($name);
-    $registro->setTipo($tipo);
+    $registro->setTipo_id($tipo_id);
 
     $registro->update($id);
 
@@ -33,11 +33,11 @@ if (isset($_GET['acao']) && ($_GET['acao']) == 'editar') :
         <input type="hidden" name="id" value="<?php echo $resultado['id']; ?>">
         <div class="input-prepend">
             <span class="add-on"><i class="icon-user"></i></span>
-            <input type="text" name="name" value="<?php echo $resultado['name']; ?>"/>
+            <input type="text" name="name" value="<?php echo $resultado['name']; ?>">
         </div>
 
         <div class="input-prepend">
-            <label class="control-label"><i class="icon-refresh"></i></span>
+            <label class="control-label"><i class="icon-share-alt"></i>
                 <select class = "form-control" name = "tipo_id">
                     <?php
                     include '../classes/Tipo.php';
