@@ -1,5 +1,7 @@
 <?php
-require_once '../classes/Usuarios.php';
+//include_once '../top/verificaLogado.php';
+
+require_once './Usuarios.php';
 
 $usuario = new Usuarios();
 

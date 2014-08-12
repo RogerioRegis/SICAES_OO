@@ -1,5 +1,5 @@
 <?php
-include_once '../classes/Registro.php';
+include_once './Registro.php';
 
 $registro = new Registro();
 

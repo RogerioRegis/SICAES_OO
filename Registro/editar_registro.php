@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Registro.php';
+require_once './Registro.php';
 
 $registro = new Registro();
 
@@ -40,11 +40,11 @@ if (isset($_GET['acao']) && ($_GET['acao']) == 'editar') :
             <label class="control-label"><i class="icon-share-alt"></i>
                 <select class = "form-control" name = "tipo_id">
                     <?php
-                    include '../classes/Tipo.php';
+                    include '../Tipo/Tipo.php';
                     $obj_tipo = new Tipo();
                     foreach ($obj_tipo->listarTodos() as $key => $value) :
                         ?>
-                        <option value="<?= $value['id']; ?>"><?= $value['tipo']; ?></option>
+                    <option <?php if($value['id'] == $resultado['tipo_id']) echo 'selected'; ;?> value="<?= $value['id']; ?>"><?= $value['tipo']; ?></option>
                     <?php endforeach; ?>
                 </select>
             </label>

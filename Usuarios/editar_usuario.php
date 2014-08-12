@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Usuarios.php';
+require_once '../Usuarios/Usuarios.php';
 
 $usuario = new Usuarios();
 
@@ -8,9 +8,11 @@ if (isset($_POST['atualizar'])) {
     $id = $_POST['id'];
     $login = $_POST['login'];
     $senha = md5($_POST['senha']);
+    $permissao = $_POST['permissao'];
 
     $usuario->setLogin($login);
     $usuario->setSenha($senha);
+    $usuario->setPermissao($permissao);
 
     $usuario->update($id);
 
@@ -39,6 +41,10 @@ if (isset($_GET['acao']) && ($_GET['acao']) == 'editar') :
             <span class="add-on"><i class="icon-lock"></i></span>
             <input required type="password" name="senha" value="<?php echo $resultado['senha']; ?>" placeholder="Nova senha" />
         </div>
+        <br />
+        Nível de Acesso: 
+        <input type="radio" name="permissao" value="<?php echo $resultado['permissao']; ?>"> Administrador &nbsp;
+        <input type="radio" name="permissao" value="<?php echo $resultado['permissao']; ?>"> Visitante<br />
         <br />
         <input type="submit" name="atualizar" class="btn btn-primary" value="atualizar">
         <a href="./listar_usuarios.php"><button class="btn btn-default" type="button">Cancelar</button ></a>

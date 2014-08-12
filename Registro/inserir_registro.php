@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Registro.php';
+require_once './Registro.php';
 
 $registro = new Registro();
 
@@ -32,7 +32,7 @@ Formulario de Registro.
         <label class="control-label"><i class="icon-refresh"></i>
             <select class = "form-control" name = "tipo_id">
                 <?php
-                include '../classes/Tipo.php';
+                include '../Tipo/Tipo.php';
                 $obj_tipo = new Tipo();
                 foreach ($obj_tipo->listarTodos() as $key => $value) :
                     ?>
@@ -44,7 +44,7 @@ Formulario de Registro.
 
     <br />
     <input type="submit" name="cadastrar" class="btn btn-primary" value="Cadastrar">
-    <a href="index.php"><button class="btn btn-default" type="button">Cancelar</button ></a>
+    <a href="../Registro/listar_registro.php"><button class="btn btn-default" type="button">Cancelar</button ></a>
 </form>
 
 <?php

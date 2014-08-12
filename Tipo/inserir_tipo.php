@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Tipo.php';
+require_once '../Tipo/Tipo.php';
 
 $obj_tipo = new Tipo();
 
@@ -26,7 +26,7 @@ Inserir Novo Tipo
         <input type="text" name="tipo" placeholder="Novo Tipo" required />
     </div>
     <br />
-    <input type="submit" name="inserir" class="btn btn-primary" value="Cadastrar">
+    <input type="submit" name="inserir" class="btn btn-primary" value="Inserir">
     <a href="./listar_tipo.php"><button class="btn btn-default" type="button">Cancelar</button ></a>
 </form>
 

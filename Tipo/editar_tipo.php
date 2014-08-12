@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Tipo.php';
+require_once '../Tipo/Tipo.php';
 
 $obj_tipo = new Tipo();
 

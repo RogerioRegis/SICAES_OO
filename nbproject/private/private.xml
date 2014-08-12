@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/var/www/USUARIOS_OO/Registro/inserir_registro.php</file>
-            <file>file:/var/www/USUARIOS_OO/Registro/listar_registro.php</file>
-            <file>file:/var/www/USUARIOS_OO/classes/Tipo.php</file>
-            <file>file:/var/www/USUARIOS_OO/Registro/editar_registro.php</file>
-            <file>file:/var/www/USUARIOS_OO/classes/Registro.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

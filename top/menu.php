@@ -9,7 +9,7 @@
                         <li><a href="../Registro/listar_registro.php">Registro</a></li>
                         <li><a href="../Tipo/listar_tipo.php">Tipo</a></li>
                         <li><a href="../Usuarios/listar_usuarios.php">Usuário</a></li>
-                        <li><a href="#"> Sair </a></li>
+                        <li><a href="../logout.php"> Sair </a></li>
                     </ul>
                 </div>
             </div>

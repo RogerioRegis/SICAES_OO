@@ -1,5 +1,7 @@
 <?php
-require_once '../classes/Tipo.php';
+//include_once '../top/verificaLogado.php';
+
+require_once '../Tipo/Tipo.php';
 
 $obj_tipo = new Tipo();
 
